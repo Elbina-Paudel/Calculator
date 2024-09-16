@@ -1,6 +1,6 @@
 # SmartCalc by Elbina
 
-**SmartCalc by Elbina** is a sleek, interactive, and beautifully designed web-based calculator. It combines simplicity, elegance, and powerful functionality to perform essential arithmetic operations with a modern user interface featuring a mix of blue, white, and pink colors.
+**SmartCalc by Elbina** is a sleek, interactive, and beautifully designed calculator. It combines simplicity, elegance, and powerful functionality to perform essential arithmetic operations with a modern user interface featuring a mix of blue, white, and pink colors.
 
 ## 🌟 Features
 
