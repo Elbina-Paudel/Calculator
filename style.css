@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    background: linear-gradient(to bottom, #ffccff, #ccf2ff, #ffffff);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Make sure container is above background */
+    z-index: 1; /* Set container above background */
+}
+
+.title {
+    font-size: 35px;
+    color: #4a90e2;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #ff99cc;
+    animation: fadeInText 2s ease-in-out;
+}
+
+.calculator-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border: 10px solid #ff99cc;
+    position: relative;
+    width: 350px;
+    animation: scaleUp 1.5s ease-out;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 26px;
+    text-align: right;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: #e6f7ff;
+    color: #333;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    border-radius: 12px;
+    padding: 18px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+    z-index: 1; /* Ensure buttons are clickable */
+}
+
+button:active {
+    background-color: #357ABD;
+    transform: translateY(4px);
+}
+
+/* Animations */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Background Animation */
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #4a90e2, #ffccff, #ffffff);
+    z-index: 0; /* Move background behind everything */
+    animation: moveBackground 6s linear infinite;
+    opacity: 0.25;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300% 300%;
+    }
+}
